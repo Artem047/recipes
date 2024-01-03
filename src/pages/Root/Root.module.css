@@ -1,0 +1,45 @@
+.layout{
+	display: flex;
+	min-height: 100vh;
+}
+.sidebar{
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white-color);
+}
+.logo{
+	width: 100px;
+}
+.menu{
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	margin-top: 70px;
+}
+.link{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--text-color);
+	text-decoration: none;
+}
+.exit{
+	border-top: 2px solid var(--text-color);
+	padding: 20px 0px;
+	margin-top: auto;
+}
+.exit-btn{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+.content{
+	width: 100%;
+	background-color: var(--white-background-color);
+}
+

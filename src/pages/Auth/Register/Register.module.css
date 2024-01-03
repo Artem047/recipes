@@ -1,0 +1,74 @@
+.register{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title{
+	color: var(--white-color);
+}
+.form{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 500px;
+	width: 100vw;
+	padding: 50px;
+	border-radius: 10px;
+	background-color: var(--white-color);
+}
+.account{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.email{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 56px;
+	border-radius: 32px;
+	border: 1px solid var(--input-border-color);
+	background-color: transparent;
+}
+.password{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 56px;
+	border-radius: 32px;
+	border: 1px solid var(--input-border-color);
+	background-color: transparent;
+}
+
+.field{
+	width: 25px;
+	padding: 20px;
+	color: var(--text-secondary-color);
+}
+.account{
+	display: flex;
+	gap: 10px;
+}
+.submit{
+	width: 100%;
+	height: 56px;
+	margin-top: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	border: none;
+	border-radius: 32px;
+}
+input{
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+input::placeholder{
+	color: var(--text-color);
+}
