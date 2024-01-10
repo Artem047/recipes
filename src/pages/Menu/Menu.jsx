@@ -1,9 +1,10 @@
-import { UserAuth } from '../../context/AuthContext'
+import ProductCard from '../../components/ProductCard/ProductCard'
 
 const Menu = () => {
-  const {user} = UserAuth();
   return (
-	<div>Hello {user.displayName === null ? user.email : user.displayName}</div>
+    <div>
+      <ProductCard />
+    </div>
   )
 }
 

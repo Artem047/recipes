@@ -1,0 +1,21 @@
+li{
+	list-style-type: none;
+}
+.card{
+	text-align: center;
+}
+.product-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+}
+.product-card{
+	max-width: 400px;
+	height: 400px;
+	width: 100%;
+	background-color: gray;
+}
+.product-image{
+	width: 200px;
+}

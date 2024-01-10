@@ -5,22 +5,22 @@ import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { database } from '../../utils/FirebaseConfig';
 import { UserAuth } from '../../context/AuthContext';
- 
+
 const Root = () => {
   const navigate = useNavigate();
-  const { user } = UserAuth()
+  const { user } = UserAuth();
 
   const logoutClick = () => {
     signOut(database).then(() => navigate('/auth/login'))
   }
-  
+
   return (
     <div className={styles['layout']}>
       <div className={styles['sidebar']}>
         <div>
           {user.photoURL == null ? <img src="/logo.png" alt="Изображение логотипа" className={styles['logo']} /> : <img src={user.photoURL} alt="" className={styles['logo']} />}
-          
-        </div>
+        </div> <br />
+        <b>{user.displayName === null ? user.email : user.displayName}</b>
         <nav className={styles['menu']}>
           <NavLink to='/' className={styles['link']}>
             <IoHomeOutline size={30} /> Главная
@@ -37,8 +37,8 @@ const Root = () => {
         </nav>
         <div className={styles['exit']}>
           <button className={styles['exit-btn']} onClick={logoutClick}>
-              <IoExitOutline size={30} />
-              Log out
+            <IoExitOutline size={30} />
+            Log out
           </button>
         </div>
       </div>

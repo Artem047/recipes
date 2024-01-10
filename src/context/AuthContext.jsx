@@ -14,9 +14,9 @@ export const AuthContextProvider = ({ children }) => {
 
 	const googleSignIn = () => {
 		try {
-		signInWithPopup(database, provider).then((data) => console.log(data))
+			signInWithPopup(database, provider).then((data) => console.log(data))
 		} catch (e) {
-		alert(e.message);
+			alert(e.message);
 		}
 	}
 
@@ -24,7 +24,7 @@ export const AuthContextProvider = ({ children }) => {
 		e.preventDefault();
 
 		signInWithEmailAndPassword(database, email, password).then((data) => {
-		console.log(data);
+			console.log(data);
 		}).catch(err => console.log(err.message))
 	}
 
