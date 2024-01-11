@@ -1,0 +1,17 @@
+.category{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 5px 0px 20px 0px;
+}
+.category-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 50%;
+}

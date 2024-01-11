@@ -1,22 +1,23 @@
 import { useState } from 'react';
-import styles from './ProductCard.module.css';
+import styles from './PopularCard.module.css';
 import { useEffect } from 'react';
 import { API } from '../../utils/API';
+import { IoHeart } from "react-icons/io5";
 
-const ProductCard = () => {
-	const [product, setProduct] = useState([]);
+const PopularCard = () => {
+	const [popular, setPopular] = useState([]);
 
 	const gerRandomRecipe = async () => {
 		const check = localStorage.getItem('product');
 
 		if(check){
-			setProduct(JSON.parse(check));
+			setPopular(JSON.parse(check));
 		}else{
-			const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API}&number=9`);
+			const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API}&number=8`);
 			const data = await api.json();
 
 			localStorage.setItem('product', JSON.stringify(data.recipes));
-			setProduct(data.recipes);
+			setPopular(data.recipes);
 			console.log(data.recipes);
 		}
 	}
@@ -28,8 +29,11 @@ const ProductCard = () => {
 	return (
 		<div className={styles['card']}>
 			<div className={styles['product-list']}>
-				{product.map((recipe, id) => (
+				{popular.map((recipe, id) => (
 					<li className={styles['product-card']} key={id}>
+						<div className={styles['heart']}>
+							<IoHeart size={30} /> 
+						</div>
 						<img className={styles['product-image']} src={recipe.image} alt={recipe.title} />
 						<p>{recipe.title}</p>
 					</li>
@@ -39,4 +43,4 @@ const ProductCard = () => {
 	)
 }
 
-export default ProductCard
+export default PopularCard

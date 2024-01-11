@@ -23,16 +23,16 @@ const Root = () => {
         </div>
         <nav className={styles['menu']}>
           <NavLink to='/' className={styles['link']}>
-            <IoHomeOutline size={30} /> Главная
+            <IoHomeOutline size={30} /> Home
           </NavLink>
           <NavLink to='/heart' className={styles['link']}>
-            <IoHeartOutline size={30} /> Избранное
+            <IoHeartOutline size={30} /> Heart
           </NavLink>
           <NavLink to='/profile' className={styles['link']}>
-            <IoPersonCircleOutline size={30} /> Профиль
+            <IoPersonCircleOutline size={30} /> Profile
           </NavLink>
           <NavLink to='/settings' className={styles['link']}>
-            <IoSettingsSharp size={30} /> Настройки
+            <IoSettingsSharp size={30} /> Settings
           </NavLink>
         </nav>
         
