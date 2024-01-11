@@ -22,7 +22,7 @@
 	align-items: center;
 	gap: 10px;
 }
-a{
+.register{
 	font-weight: bold;
 	text-decoration: none;
 	color: var(--primary-color);

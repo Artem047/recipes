@@ -35,11 +35,10 @@ const Root = () => {
             <IoSettingsSharp size={30} /> Settings
           </NavLink>
         </nav>
-        
-          <button className={styles['exit-btn']} onClick={logoutClick}>
-            <IoExitOutline size={30} />
-            Log out
-          </button>
+        <button className={styles['exit-btn']} onClick={logoutClick}>
+          <IoExitOutline size={30} />
+          Log out
+        </button>
       </div>
       <div className={styles['content']}>
         <Outlet />

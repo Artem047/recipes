@@ -50,7 +50,7 @@ const Login = () => {
         </button>
         <div className={styles['account']}>
           <p>У вас нет никакого аккаунта?</p>
-          <Link to='/auth/register'>Зарегистрироваться</Link>
+          <Link to='/auth/register' className={styles['register']}>Зарегистрироваться</Link>
         </div>
       </form>
   </div>

@@ -14,4 +14,7 @@
     height: 100px;
     background-color: gray;
     border-radius: 50%;
+    color: var(--text-secondary-color);
+    background-color: var(--primary-hover-color);
+    text-decoration: none;
 }
