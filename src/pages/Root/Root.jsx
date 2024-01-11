@@ -17,10 +17,10 @@ const Root = () => {
   return (
     <div className={styles['layout']}>
       <div className={styles['sidebar']}>
-        <div>
-          {user.photoURL == null ? <img src="/logo.png" alt="Изображение логотипа" className={styles['logo']} /> : <img src={user.photoURL} alt="" className={styles['logo']} />}
-        </div> <br />
-        <b>{user.displayName === null ? user.email : user.displayName}</b>
+      <div className={styles['user']}>
+          <b>{user.displayName === null ? user.email : user.displayName}</b>
+          {user.photoURL == null ? <img src="/avatar.png" alt="Изображение логотипа" className={styles['logo']} /> : <img src={user.photoURL} alt="" className={styles['logo']} />}
+        </div>
         <nav className={styles['menu']}>
           <NavLink to='/' className={styles['link']}>
             <IoHomeOutline size={30} /> Главная
@@ -35,12 +35,11 @@ const Root = () => {
             <IoSettingsSharp size={30} /> Настройки
           </NavLink>
         </nav>
-        <div className={styles['exit']}>
+        
           <button className={styles['exit-btn']} onClick={logoutClick}>
             <IoExitOutline size={30} />
             Log out
           </button>
-        </div>
       </div>
       <div className={styles['content']}>
         <Outlet />
