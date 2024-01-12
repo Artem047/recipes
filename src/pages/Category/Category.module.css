@@ -1,8 +1,11 @@
 .category{
+   text-align: center;
+    padding: 5px 0px 20px 0px;
+}
+.category-product{
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 5px 0px 20px 0px;
 }
 .category-link{
     display: flex;
