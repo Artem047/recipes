@@ -10,15 +10,22 @@
 	height: 100%;
 	background-color: var(--white-color);
 }
-.user{
+.site-header{
 	display: flex;
-	gap: 5px;
-	align-items: center;
+	font-size: 18px;
 }
-.logo{
+.site-header b{
+	color: var(--primary-hover-color);
+}
+.user{
 	border-radius: 50%;
 	max-width: 80px;
+	max-height: 80px;
 	width: 100%;
+	height: 100%;
+}
+.logo{
+
 }
 .menu{
 	display: flex;

@@ -5,7 +5,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './pages/Root/Root.jsx'
 import Heart from './pages/Heart/Heart.jsx'
 import Profile from './pages/Profile/Profile.jsx'
-import Menu from './pages/Menu/Menu.jsx'
 import ErrorPage from './pages/Error/ErrorPage.jsx'
 import Auth from './pages/Auth/Auth.jsx'
 import Login from './pages/Auth/Login/Login.jsx'
@@ -14,6 +13,7 @@ import { AuthContextProvider } from './context/AuthContext.jsx'
 import Protected from './components/Protected.jsx'
 import Category from './pages/Category/Category.jsx'
 import ProductPage from './components/ProductPage/ProductPage.jsx'
+import Home from './pages/Home/Home.jsx'
 
 
 const router = createBrowserRouter([
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Menu />,
+        element: <Home />,
       },
       {
         path: '/heart',

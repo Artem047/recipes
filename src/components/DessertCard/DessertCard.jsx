@@ -28,22 +28,25 @@ const DessertCard = () => {
     gerRandomRecipe();
   }, []);
   return( 
-    <Splide className={styles["card"]} options={{
-        perPage: 4,
-        arrows: false,
-        pagination: false,
-        drag: 'free',
-        gap: '5rem',
-    }}>
-        {dessert.map((dess) => {
-            return (
-                <SplideSlide key={dess.id} className={styles['card-slide']}>
-                    <p className={styles['card-title']}>{dess.title}</p>
-                    <img src={dess.image} alt={dess.title} className={styles['card-image']} />
-                </SplideSlide>
-            )
-        })}
-    </Splide>
+    <div>
+      <h1>Dessert</h1>
+      <Splide className={styles["card"]} options={{
+          perPage: 4,
+          arrows: false,
+          pagination: false,
+          drag: 'free',
+          gap: '1rem',
+      }}>
+          {dessert.map((dess) => {
+              return (
+                  <SplideSlide key={dess.id} className={styles['card-slide']}>
+                      <p className={styles['card-title']}>{dess.title}</p>
+                      <img src={dess.image} alt={dess.title} className={styles['card-image']} />
+                  </SplideSlide>
+              )
+          })}
+      </Splide>
+    </div>
   );
 };
 

@@ -1,0 +1,46 @@
+.home{
+    position: relative;
+    display: flex;
+    gap: 200px;
+    padding: 150px 120px;
+    background-image: url('/back.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.title-text{
+    max-width: 576px;
+    width: 100%;
+}
+.title-text b{
+    color: var(--primary-hover-color);
+}
+.title-text h1{
+    font-size: 64px;
+}
+.title-text p{
+    font-size: 24px;
+    color: var(--text-color);
+}
+.dish{
+    position: relative;
+}
+.dish img{
+    position: absolute;
+}
+.dish-info{
+    position: absolute;
+    z-index: 10;
+    bottom: -50px;
+    left: -150px;
+    background-color: var(--white-color);
+    width: 320px;
+    padding: 0px 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+.dish-info h1{
+    font-size: 24px;
+    text-align: center;
+}
+.dish-info p{
+    font-size: 16px;
+}

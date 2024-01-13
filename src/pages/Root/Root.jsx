@@ -18,9 +18,9 @@ const Root = () => {
   return (
     <div className={styles['layout']}>
       <div className={styles['sidebar']}>
-      <div className={styles['user']}>
-          <b>{user.displayName === null ? user.email : user.displayName}</b>
-          {user.photoURL == null ? <img src="/avatar.png" alt="Изображение логотипа" className={styles['logo']} /> : <img src={user.photoURL} alt="" className={styles['logo']} />}
+        <div className={styles['site-header']}>
+          <img src="/logo.svg" alt="Иконка сайта" className={styles['logo']} />
+          <p>Artem<b>Recipes</b></p>
         </div>
         <nav className={styles['menu']}>
           <NavLink to='/' className={styles['link']}>
@@ -36,10 +36,12 @@ const Root = () => {
             <IoPersonCircleOutline size={30} /> Profile
           </NavLink>
         </nav>
-        <button className={styles['exit-btn']} onClick={logoutClick}>
+        {user.photoURL == null ? <img src="/avatar.png" alt="Изображение логотипа" className={styles['user']} /> : <img src={user.photoURL} alt="" className={styles['user']} />}
+
+        {/* <button className={styles['exit-btn']} onClick={logoutClick}>
           <IoExitOutline size={30} />
           Log out
-        </button>
+        </button> */}
       </div>
       <div className={styles['content']}>
         <Outlet />
