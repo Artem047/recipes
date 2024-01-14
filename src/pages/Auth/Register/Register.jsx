@@ -3,12 +3,14 @@ import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { Link, useNavigate } from "react-router-dom";
 import { database } from '../../../utils/FirebaseConfig';
 import { useState } from 'react';
+import { FaEye } from "react-icons/fa";
 
 const Register = () => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('');
+  const [show, setShow] = useState(false);
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -28,7 +30,8 @@ const Register = () => {
         </div>
         <div className={styles['password']}>
           <img src='/lock.png' className={styles['field']} />
-          <input required name='password' type="password" placeholder='Введите ваш пароль...' onChange={(e) => setPassword(e.target.value)} />
+          <input required name='password' type={show ? 'text' : 'password'} placeholder='Введите ваш пароль...' onChange={(e) => setPassword(e.target.value)} />
+          <FaEye size={30} className={styles['password-eye']} onClick={() => setShow(!show)} />
         </div>
         <button type='submit' onClick={onSignUp} className={styles['submit']}>
           Зарегистрироваться
