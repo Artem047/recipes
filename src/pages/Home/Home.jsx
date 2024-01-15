@@ -1,4 +1,5 @@
 import PopularCard from "../../components/PopularCard/PopularCard"
+import PopularCategories from "../../components/PopularCategories/PopularCategories";
 import TouchContact from "../../components/TouchContact/TouchContact";
 import styles from "./Home.module.css";
 
@@ -37,6 +38,10 @@ const Home = () => {
         <PopularCard />
       </div>
       <TouchContact />
+      <div className={styles['home-popular-category']}>
+          <h1>Popular Categories</h1>
+          <PopularCategories />
+      </div>
     </div>
   )
 }

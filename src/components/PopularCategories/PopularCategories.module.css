@@ -1,0 +1,25 @@
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+}
+.category-card img{
+    max-width: 300px;
+    width: 100%;
+}
+.category-card h2{
+    font-size: 24px;
+    text-align: center;
+}
+.category-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    color: var(--text-secondary-color);
+    text-decoration: none;
+}
