@@ -1,15 +1,9 @@
-li{
-	list-style-type: none;
-}
-.card{
-	text-align: center;
-	padding: 40px 0px;
-}
-.product-list{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 30px;
+.food{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 0px;
+    text-align: center;
 }
 .product-card{
 	position: relative;
