@@ -14,12 +14,13 @@ import Protected from './components/Protected.jsx'
 import Category from './pages/Category/Category.jsx'
 import ProductPage from './components/ProductPage/ProductPage.jsx'
 import Home from './pages/Home/Home.jsx'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Protected><Root /></Protected>,
+    element: <Protected><ScrollToTop><Root /></ScrollToTop></Protected>,
     children: [
       {
         path: '/',
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthContextProvider>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
     </AuthContextProvider>
   </React.StrictMode>,
 )

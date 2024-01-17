@@ -5,6 +5,7 @@ import { UserAuth } from '../../context/AuthContext';
 import { PiCookingPotBold } from "react-icons/pi";
 import Footer from '../Footer/Footer';
 
+
 const Root = () => {
   const { user } = UserAuth();
 
