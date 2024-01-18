@@ -1,0 +1,13 @@
+.category-page{}
+.page-link{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--text-secondary-color);
+}
+.page-link a{
+    color: var(--text-secondary-color);
+    text-decoration: none;
+}

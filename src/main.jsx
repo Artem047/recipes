@@ -12,9 +12,9 @@ import Register from './pages/Auth/Register/Register.jsx'
 import { AuthContextProvider } from './context/AuthContext.jsx'
 import Protected from './components/Protected.jsx'
 import Category from './pages/Category/Category.jsx'
-import ProductPage from './components/ProductPage/ProductPage.jsx'
 import Home from './pages/Home/Home.jsx'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import CategoryPage from './components/CategoryPage/CategoryPage.jsx'
 
 
 const router = createBrowserRouter([
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/category/:page',
-        element: <ProductPage />
+        element: <CategoryPage />
       }
     ]
   },
