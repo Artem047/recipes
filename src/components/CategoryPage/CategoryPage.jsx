@@ -4,12 +4,12 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { API } from "../../utils/API";
 import { IoHeart } from "react-icons/io5";
-import { FaClock } from "react-icons/fa6";
-import { IoMdPricetag } from "react-icons/io";
+import Loading from "../Loading";
 
 const CategoryPage = () => {
   const [category, setCategory] = useState([]);
   const { page } = useParams();
+  const [isLoading, setIsLoading] = useState(false);
 
   const getRecipes = async (name) => {
     const data = await fetch(
@@ -21,11 +21,14 @@ const CategoryPage = () => {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(true);
+    }, 2000);
     getRecipes(page);
     console.log(page);
   }, [page]);
 
-  return (
+  return isLoading ? (
     <div className={styles["category-page"]}>
       <div className={styles["page-link"]}>
         <Link to="/category">Category</Link>
@@ -50,6 +53,8 @@ const CategoryPage = () => {
         })}
       </div>
     </div>
+  ) : (
+    <Loading />
   );
 };
 

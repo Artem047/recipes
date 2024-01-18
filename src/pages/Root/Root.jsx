@@ -33,7 +33,7 @@ const Root = () => {
         {user.photoURL == null ? <img src="/avatar.png" alt="Изображение логотипа" className={styles['user']} /> : <img src={user.photoURL} alt="" className={styles['user']} />}
       </div>
       <div className={styles['content']}>
-        <Outlet />
+          <Outlet />
       </div>
       <div className={styles['footer']}>
         <Footer />

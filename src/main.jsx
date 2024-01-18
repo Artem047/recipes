@@ -18,6 +18,8 @@ import CategoryPage from './components/CategoryPage/CategoryPage.jsx'
 import CategoryCard from './components/CategoryCard/CategoryCard.jsx'
 
 
+
+
 const router = createBrowserRouter([
   {
     path: '/',
