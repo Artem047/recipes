@@ -11,3 +11,38 @@
     color: var(--text-secondary-color);
     text-decoration: none;
 }
+.category-list{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+    padding: 20px 0px;
+}
+.category-card{
+    position: relative;
+	max-width: 380px;
+	height: 370px;
+	width: 100%;
+	background-color: var(--white-color);
+	border-radius: 20px 20px 0px 0px;
+}
+.category-card p{
+	padding: 10px 0px;
+	font-size: 18px;
+    text-align: center;
+}
+.heart{
+	position: absolute;
+	cursor: pointer;
+	padding: 5px 10px;
+	right: 20px;
+	top: 15px;
+	z-index: 10;
+	background-color: var(--white-color);
+	border-radius: 10px;
+}
+.category-image{
+	width: 100%;
+	filter: brightness(80%);
+	border-radius: 20px 20px 0px 0px;
+}

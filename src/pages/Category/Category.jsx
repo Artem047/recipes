@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Category.module.css';
-import { LuCroissant } from "react-icons/lu";
+import { LuCroissant, LuSalad } from "react-icons/lu";
 import { FaBurger, FaPizzaSlice } from "react-icons/fa6";
 import { BiSolidSushi } from "react-icons/bi";
 import FranceFood from '../../components/FranceFood/FranceFood';
@@ -25,9 +25,9 @@ const Category = () => {
             <FaPizzaSlice size={35}/>
             <b>Italian</b>
         </NavLink>
-        <NavLink to='/category/france' className={styles['category-link']}>
-            <LuCroissant size={35}/>
-            <b>France</b>
+        <NavLink to='/category/greek' className={styles['category-link']}>
+            <LuSalad size={35}/>
+            <b>Greek</b>
         </NavLink>
       </div>
       <hr />

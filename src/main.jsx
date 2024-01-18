@@ -13,8 +13,9 @@ import { AuthContextProvider } from './context/AuthContext.jsx'
 import Protected from './components/Protected.jsx'
 import Category from './pages/Category/Category.jsx'
 import Home from './pages/Home/Home.jsx'
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop.js';
 import CategoryPage from './components/CategoryPage/CategoryPage.jsx'
+import CategoryCard from './components/CategoryCard/CategoryCard.jsx'
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/category/:page',
         element: <CategoryPage />
+      },
+      {
+        path: '/category/:page/:card',
+        element: <CategoryCard />
       }
     ]
   },

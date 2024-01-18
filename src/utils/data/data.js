@@ -11,8 +11,8 @@ export const popularCategory = [
     },
     {
         id: 3,
-        title: 'France',
-        image: '/france.png',
+        title: 'Greek',
+        image: '/greek.png',
     },
     {
         id: 4,
