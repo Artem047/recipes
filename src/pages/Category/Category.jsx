@@ -1,14 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Category.module.css';
-import { LuCroissant, LuSalad } from "react-icons/lu";
+import { LuSalad } from "react-icons/lu";
 import { FaBurger, FaPizzaSlice } from "react-icons/fa6";
 import { BiSolidSushi } from "react-icons/bi";
 import FranceFood from '../../components/FranceFood/FranceFood';
+import Loading from '../../components/Loading';
+import { useEffect, useState } from 'react';
 
 
 
 const Category = () => {
-  return (
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(true);
+    }, 1000);
+  });
+  
+  return isLoading ? (
     <div className={styles['category']}>
       <h1>Category</h1>
       <hr />
@@ -33,7 +43,7 @@ const Category = () => {
       <hr />
       <FranceFood />
     </div>
-  )
+  ) : <Loading />
 }
 
 export default Category
