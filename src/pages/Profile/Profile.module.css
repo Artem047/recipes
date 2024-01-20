@@ -60,6 +60,15 @@
 	left: -25px;
 	filter: brightness(0.95);
 }
+.profile-time{
+	display: grid;
+	grid-template-columns: repeat(2, 395px);
+	justify-content: center;
+	gap: 32px;
+	max-width: 850px;
+	width: 100%;
+	padding: 20px 0px;
+}
 .exit-btn{
 	display: flex;
 	align-items: center;

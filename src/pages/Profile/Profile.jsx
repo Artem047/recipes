@@ -42,6 +42,22 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <div className={styles['profile-time']}>
+      <div>
+          <label>Created account</label>
+          <div className={styles['profile-input']}>
+            <img src="/clock.png" alt="" />
+            <div className={styles['profile-title']}>{user.metadata && user.metadata.creationTime ? user.metadata.creationTime : 'N/A'}</div>
+          </div>
+        </div>
+        <div>
+          <label>Last seen</label>
+          <div className={styles['profile-input']}>
+            <img src="/clock.png" alt="" />
+            <div className={styles['profile-title']}>{user.metadata && user.metadata.lastSignInTime ? user.metadata.lastSignInTime : 'N/A'}</div>
+          </div>
+        </div>
+      </div>
       <button className={styles['exit-btn']} onClick={logoutClick}>
             <IoExitOutline size={40} />
             Log out
