@@ -4,21 +4,10 @@ import { LuSalad } from "react-icons/lu";
 import { FaBurger, FaPizzaSlice } from "react-icons/fa6";
 import { BiSolidSushi } from "react-icons/bi";
 import FranceFood from '../../components/FranceFood/FranceFood';
-import Loading from '../../components/Loading';
-import { useEffect, useState } from 'react';
-
-
 
 const Category = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(true);
-    }, 1000);
-  });
   
-  return isLoading ? (
+  return (
     <div className={styles['category']}>
       <h1>Category</h1>
       <hr />
@@ -43,7 +32,7 @@ const Category = () => {
       <hr />
       <FranceFood />
     </div>
-  ) : <Loading />
+  )
 }
 
 export default Category

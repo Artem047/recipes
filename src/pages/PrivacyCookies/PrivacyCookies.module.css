@@ -1,0 +1,29 @@
+.privacy{
+    padding: 40px 120px;
+}
+.privacy-navigate{
+    display: flex;
+    align-items: center;
+}
+.privacy-navigate a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.privaci-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0px;
+}
+.privaci-text h2{
+    font-size: 40px;
+    text-align: center;
+}
+.privaci-text h3{
+    font-size: 36px;
+    text-align: center;
+}
+.privaci-text p{
+    padding: 10px;
+    font-size: 24px;
+}

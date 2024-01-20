@@ -16,6 +16,7 @@ import Home from './pages/Home/Home.jsx'
 import ScrollToTop from './components/ScrollToTop.js';
 import CategoryPage from './components/CategoryPage/CategoryPage.jsx'
 import CategoryCard from './components/CategoryCard/CategoryCard.jsx'
+import PrivacyCookies from './pages/PrivacyCookies/PrivacyCookies.jsx'
 
 
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: '/category/:page/:card',
         element: <CategoryCard />
+      },
+      {
+        path: '/privacy',
+        element: <PrivacyCookies />
       }
     ]
   },

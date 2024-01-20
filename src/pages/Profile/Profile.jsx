@@ -43,11 +43,10 @@ const Profile = () => {
         </div>
       </div>
       <button className={styles['exit-btn']} onClick={logoutClick}>
-            <IoExitOutline size={30} />
+            <IoExitOutline size={40} />
             Log out
       </button>
     </div>
-    
   </div>
   )
 }
