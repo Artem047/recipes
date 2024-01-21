@@ -38,7 +38,7 @@ const CategoryPage = () => {
       <div className={styles["category-list"]}>
         {category.map((cat) => {
           return (
-            <div className={styles["category-card"]} key={cat.id}>
+            <Link to={`/category/${page}/${cat.id}`} className={styles["category-card"]} key={cat.id}>
               <div className={styles["heart"]}>
                 <IoHeart color="red" size={30} />
               </div>
@@ -48,7 +48,7 @@ const CategoryPage = () => {
                 alt={cat.title}
               />
               <p>{cat.title}</p>
-            </div>
+            </Link>
           );
         })}
       </div>

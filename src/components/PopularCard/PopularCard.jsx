@@ -5,6 +5,7 @@ import { API } from '../../utils/API';
 import { IoHeart } from "react-icons/io5";
 import { FaClock } from "react-icons/fa6";
 import { IoMdPricetag } from "react-icons/io";
+import { Link, useParams } from 'react-router-dom';
 
 
 const PopularCard = () => {
@@ -29,11 +30,13 @@ const PopularCard = () => {
 		gerRandomRecipe();
 	}, [])
 
+	// to={`/category/${recipe.id}/${recipe.title.split(' ').join('')}`}
+
 	return (
 		<div className={styles['card']}>
 			<div className={styles['product-list']}>
-				{popular.map((recipe, id) => (
-					<li className={styles['product-card']} key={id}>
+				{popular.map((recipe) => (
+					<Link to={`/category/${recipe.id}/${recipe.title.split(' ').join('')}`} className={styles['product-card']} key={recipe.id}>
 						<div className={styles['heart']}>
 							<IoHeart color='red' size={30} /> 
 						</div>
@@ -49,7 +52,7 @@ const PopularCard = () => {
 								<h4>{recipe.pricePerServing} $</h4>
 							</div>
 						</div>
-					</li>
+					</Link>
 				))}
 			</div>
 		</div>

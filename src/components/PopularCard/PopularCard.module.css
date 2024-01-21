@@ -11,6 +11,10 @@ li{
 	justify-content: center;
 	gap: 30px;
 }
+.product-list a{
+	text-decoration: none;
+	color: var(--black-color);
+}
 .product-card{
 	position: relative;
 	max-width: 380px;

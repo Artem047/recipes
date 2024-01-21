@@ -26,6 +26,10 @@
 	background-color: var(--white-color);
 	border-radius: 20px 20px 0px 0px;
 }
+.category-list a{
+	text-decoration: none;
+	color: var(--black-color);
+}
 .category-card p{
 	padding: 10px 0px;
 	font-size: 18px;
