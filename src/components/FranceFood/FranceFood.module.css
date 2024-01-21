@@ -5,6 +5,10 @@
     padding: 40px 0px;
     text-align: center;
 }
+.food a{
+	text-decoration: none;
+	color: var(--black-color);
+}
 .product-card{
 	position: relative;
 	max-width: 380px;

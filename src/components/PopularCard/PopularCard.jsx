@@ -17,7 +17,7 @@ const PopularCard = () => {
 		if(check){
 			setPopular(JSON.parse(check));
 		}else{
-			const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API}&number=6`);
+			const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API}&exclude-tags=american&number=6`);
 			const data = await api.json();
 
 			localStorage.setItem('product', JSON.stringify(data.recipes));
@@ -30,13 +30,12 @@ const PopularCard = () => {
 		gerRandomRecipe();
 	}, [])
 
-	// to={`/category/${recipe.id}/${recipe.title.split(' ').join('')}`}
 
 	return (
 		<div className={styles['card']}>
 			<div className={styles['product-list']}>
 				{popular.map((recipe) => (
-					<Link to={`/category/${recipe.id}/${recipe.title.split(' ').join('')}`} className={styles['product-card']} key={recipe.id}>
+					<Link to={`/category/american/${recipe.id}`} className={styles['product-card']} key={recipe.id}>
 						<div className={styles['heart']}>
 							<IoHeart color='red' size={30} /> 
 						</div>

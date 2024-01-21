@@ -4,6 +4,7 @@ import { API } from '../../utils/API';
 import { IoHeart } from 'react-icons/io5';
 import { FaClock } from 'react-icons/fa6';
 import { IoMdPricetag } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const FranceFood = () => {
     const [food, setFood] = useState([]);
@@ -31,7 +32,7 @@ const FranceFood = () => {
     <div className={styles['food']}>
         {food.map((food) => {
             return (
-                <div className={styles['product-card']} key={food.id}>
+                <Link to={`/category/france/${food.id}`} className={styles['product-card']} key={food.id}>
                     <div className={styles['heart']}>
 							<IoHeart color='red' size={30} /> 
 						</div>
@@ -47,7 +48,7 @@ const FranceFood = () => {
 								<h4>{food.pricePerServing} $</h4>
 							</div>
 						</div>
-                </div>
+                </Link>
             )
         })}
     </div>
