@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { API } from "../../utils/API";
-import { IoHeart } from "react-icons/io5";
 import Loading from "../Loading";
 
 const CategoryPage = () => {
@@ -39,9 +38,6 @@ const CategoryPage = () => {
         {category.map((cat) => {
           return (
             <Link to={`/category/${page}/${cat.id}`} className={styles["category-card"]} key={cat.id}>
-              <div className={styles["heart"]}>
-                <IoHeart color="red" size={30} />
-              </div>
               <img
                 className={styles["category-image"]}
                 src={cat.image}

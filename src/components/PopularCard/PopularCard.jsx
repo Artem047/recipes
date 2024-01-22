@@ -6,6 +6,7 @@ import { IoHeart } from "react-icons/io5";
 import { FaClock } from "react-icons/fa6";
 import { IoMdPricetag } from "react-icons/io";
 import { Link, useParams } from 'react-router-dom';
+import ButtonIcon from '../ButtonIcon/ButtonIcon';
 
 
 const PopularCard = () => {
@@ -36,9 +37,6 @@ const PopularCard = () => {
 			<div className={styles['product-list']}>
 				{popular.map((recipe) => (
 					<Link to={`/category/american/${recipe.id}`} className={styles['product-card']} key={recipe.id}>
-						<div className={styles['heart']}>
-							<IoHeart color='red' size={30} /> 
-						</div>
 						<img className={styles['product-image']} src={recipe.image} alt={recipe.title} />
 						<p>{recipe.title}</p>
 						<div className={styles['product-info']}>
@@ -48,7 +46,7 @@ const PopularCard = () => {
 							</div>
 							<div className={styles['product-info-price']}>
 								<IoMdPricetag size={20} />
-								<h4>{recipe.pricePerServing} $</h4>
+								<h4>{recipe.pricePerServing} ₽</h4>
 							</div>
 						</div>
 					</Link>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './FranceFood.module.css';
 import { API } from '../../utils/API';
-import { IoHeart } from 'react-icons/io5';
 import { FaClock } from 'react-icons/fa6';
 import { IoMdPricetag } from 'react-icons/io';
 import { Link } from 'react-router-dom';
@@ -33,9 +32,6 @@ const FranceFood = () => {
         {food.map((food) => {
             return (
                 <Link to={`/category/france/${food.id}`} className={styles['product-card']} key={food.id}>
-                    <div className={styles['heart']}>
-							<IoHeart color='red' size={30} /> 
-						</div>
 						<img className={styles['product-image']} src={food.image} alt={food.title} />
 						<p>{food.title}</p>
 						<div className={styles['product-info']}>
@@ -45,7 +41,7 @@ const FranceFood = () => {
 							</div>
 							<div className={styles['product-info-price']}>
 								<IoMdPricetag size={20} />
-								<h4>{food.pricePerServing} $</h4>
+								<h4>{food.pricePerServing} ₽</h4>
 							</div>
 						</div>
                 </Link>

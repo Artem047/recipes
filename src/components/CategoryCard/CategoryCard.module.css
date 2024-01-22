@@ -10,7 +10,13 @@
     color: var(--text-color);
 }
 .category-card-info{
-
+    display: flex;
+    flex-direction: column;
+}
+.category-card-info img{
+    max-width: 700px;
+    width: 100%;
+    border-radius: 7px;
 }
 .category-card-info h2{
     font-size: 40px;
@@ -23,13 +29,44 @@
     justify-content: space-between;
 }
 .category-card-info-header-social{
-    position: relative;
+    display: flex;
+    gap: 25px;
 }
-.heart{
-    position: absolute;
-	cursor: pointer;
-	padding: 5px 10px;
-	z-index: 10;
-	background-color: var(--white-color);
-	border-radius: 10px;
+.category-card-product{
+    display: flex;
+    justify-content: space-between;
+}
+.category-card-product li{
+    list-style: disc;
+    font-size: 18px;
+}
+.category-card-ingredients{
+    list-style-type: disc;
+    background-color: var(--white-color);
+    padding: 24px;
+}
+.category-card-time{
+    display: flex;
+    font-size: 18px;
+    padding: 10px 20%;
+    text-align: center;
+}
+.category-card-time-list{
+    display: flex;
+    align-items: center;
+}
+.category-card-time ul li h4{
+    color: var(--text-color);
+    padding: 10px 0px;
+}
+.category-card-time hr{
+    transform: rotate(90deg);
+    width: 50px;
+}
+.category-card-instructions{
+    padding: 20px 0px;
+}
+.category-card-instructions ol li{
+    list-style: circle;
+    padding: 5px 0px;
 }
