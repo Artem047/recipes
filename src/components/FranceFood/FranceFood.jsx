@@ -10,24 +10,19 @@ const FranceFood = () => {
 
 	const getRandomRecipe = async () => {
 		const check = localStorage.getItem('food');
-	
-		if (check) {
-			try {
-				const parsedCheck = JSON.parse(check);
-				setFood(parsedCheck);
-			} catch (error) {
-				console.error("Error parsing localStorage data:", error);
-			}
-		} else {
+
+		if(check){
+			setFood(JSON.parse(check));
+		}else{
 			const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API}&exclude-tags=france&number=9`);
 			const data = await api.json();
-	
+
 			localStorage.setItem('food', JSON.stringify(data.recipes));
 			setFood(data.recipes);
 			console.log(data.recipes);
 		}
 	}
-	
+
 	useEffect(() => {
 		getRandomRecipe();
 	}, [])
