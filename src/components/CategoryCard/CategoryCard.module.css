@@ -34,6 +34,7 @@
 }
 .category-card-product{
     display: flex;
+    gap: 40px;
     justify-content: space-between;
 }
 .category-card-product li{
