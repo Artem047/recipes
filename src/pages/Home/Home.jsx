@@ -14,17 +14,7 @@ const Home = () => {
           Embark on a flavorful adventure with Your Daily Dish: A Food Journey, where each day brings a delectable exploration of diverse culinary delights to tantalize your taste buds.
           </p>
         </div>
-        <div className={styles['home-dish']}>
-          <img src="/header.png" alt="Иконка блюда" />
-          <div className={styles['home-dish-info']}>
-              <h1>
-                Salad with chicken
-              </h1>
-              <p>
-              Indulge in the classic flavors of Caesar Salad, a timeless dish that combines crisp greens, savory croutons, tangy dressing, and Parmesan cheese
-              </p>
-          </div>
-        </div>
+        <img src="/header.png" alt="Иконка блюда" />
       </div>
       <div className={styles['home-recipe']}>
           <img src="/delicious.png" alt="Изображение завтрака" />

@@ -17,9 +17,18 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 200px;
-    height: 200px;
     border-radius: 50%;
     color: var(--text-secondary-color);
     text-decoration: none;
+}
+
+
+@media (max-width: 875px){
+    .category{
+        justify-content: center;
+        gap: 50px;
+    }
+    .category-link img{
+        width: 150px;
+    }
 }
