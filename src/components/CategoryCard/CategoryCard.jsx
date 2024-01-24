@@ -6,11 +6,14 @@ import Loading from "../Loading";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoHeart, IoShareSocial } from "react-icons/io5";
 import ButtonIcon from "../ButtonIcon/ButtonIcon";
+import { useLocation } from 'react-router-dom';
 
 const CategoryCard = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  let location = useLocation();
+  
 
   const fetchRecipeDetails = async (recipeId) => {
     const data = await fetch(
@@ -28,6 +31,11 @@ const CategoryCard = () => {
     fetchRecipeDetails(id);
   }, [id]);
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(location.pathname);
+    alert('Copied')
+  }
+
   return isLoading ? (
     <div className={styles["category-card"]}>
       <div className={styles["category-card-navigate"]}>
@@ -42,10 +50,10 @@ const CategoryCard = () => {
         <div className={styles["category-card-info-header"]}>
           <h2>{recipe.title}</h2>
           <div className={styles["category-card-info-header-social"]}>
-            <ButtonIcon>
+            <ButtonIcon >
               <IoHeart size={30} color="red" />
             </ButtonIcon>
-            <ButtonIcon>
+            <ButtonIcon click={handleCopy}>
               <IoShareSocial size={30} color="#1cb96d" />
             </ButtonIcon>
           </div>
@@ -84,11 +92,6 @@ const CategoryCard = () => {
         </div>
       </div>
       )}
-      {/* {recipeDetails.map((recipe) => {
-        return (
-          
-        );
-      })} */}
     </div>
   ) : <Loading />
 };
