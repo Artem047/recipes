@@ -6,13 +6,11 @@ import Loading from "../Loading";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoHeart, IoShareSocial } from "react-icons/io5";
 import ButtonIcon from "../ButtonIcon/ButtonIcon";
-import { useLocation } from 'react-router-dom';
 
 const CategoryCard = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  let location = useLocation();
   
 
   const fetchRecipeDetails = async (recipeId) => {
@@ -29,10 +27,11 @@ const CategoryCard = () => {
       setIsLoading(true);
     }, 2000);
     fetchRecipeDetails(id);
+    // console.log(window.location.href)
   }, [id]);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(location.pathname);
+    navigator.clipboard.writeText(window.location.href);
     alert('Copied')
   }
 
