@@ -8,6 +8,7 @@
 .heart-list{
     display: flex; 
     flex-wrap: wrap;
+	gap: 20px;
 }
 .heart-list a{
     text-decoration: none;
