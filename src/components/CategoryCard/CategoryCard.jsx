@@ -27,8 +27,17 @@ const CategoryCard = () => {
       setIsLoading(true);
     }, 2000);
     fetchRecipeDetails(id);
-    // console.log(window.location.href)
   }, [id]);
+
+  const handleToHeart = () => {
+    const storedFavorites = localStorage.getItem('favorites');
+    const favoritesArray = storedFavorites ? JSON.parse(storedFavorites) : [];
+    
+    if (!favoritesArray.find((fav) => fav.id === recipe.id)) {
+      const updatedFavorites = [...favoritesArray, { ...recipe }];
+      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+    }
+  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -48,7 +57,7 @@ const CategoryCard = () => {
         <div className={styles["category-card-info-header"]}>
           <h2>{recipe.title}</h2>
           <div className={styles["category-card-info-header-social"]}>
-            <ButtonIcon>
+            <ButtonIcon click={handleToHeart}>
               <IoHeart size={30} color="red" />
             </ButtonIcon>
             <ButtonIcon click={handleCopy}>
