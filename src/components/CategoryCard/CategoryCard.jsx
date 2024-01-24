@@ -32,7 +32,6 @@ const CategoryCard = () => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href);
-    alert('Copied')
   }
 
   return isLoading ? (
@@ -49,7 +48,7 @@ const CategoryCard = () => {
         <div className={styles["category-card-info-header"]}>
           <h2>{recipe.title}</h2>
           <div className={styles["category-card-info-header-social"]}>
-            <ButtonIcon >
+            <ButtonIcon>
               <IoHeart size={30} color="red" />
             </ButtonIcon>
             <ButtonIcon click={handleCopy}>
