@@ -79,6 +79,7 @@
     .home-header{
         text-align: center;
         justify-content: center;
+        padding: 100px 0px;
     }
     .home-title h1{
         font-size: 50px;
@@ -104,5 +105,37 @@
     .home-popular-category h1{
         font-size: 32px;
         text-align: center;
+    }
+    .home-header{
+        padding: 70px 0px;
+    }
+    .home-title h1{
+        font-size: 36px;
+    }
+    .home-recipe{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+    }
+    .home-recipe img{
+        border-radius: 8px 0px 0px 8px;
+        width: 100%;
+    }
+    .home-recipe-title{
+        gap: 20px;
+    }
+    .home-popular-recipe{
+        padding: 70px 0px;
+    }
+    .home-popular-recipe h1{
+        padding: 0;
+    }
+}
+@media (max-width: 320px){
+    .home h1{
+        font-size: 30px;
+    }
+    .home-popular-category{
+        padding: 0px;
     }
 }

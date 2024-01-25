@@ -41,15 +41,18 @@ const Header = () => {
           <IoPersonCircleOutline size={30} /> Profile
         </NavLink>
       </nav>
-      {user.photoURL == null ? (
-        <img
-          src="/avatar.png"
-          alt="Изображение логотипа"
-          className={styles["user"]}
-        />
-      ) : (
-        <img src={user.photoURL} alt="" className={styles["user"]} />
-      )}
+      <div className={styles["menu_user"]}>
+        {user.photoURL == null ? (
+          <img
+            src="/avatar.png"
+            alt="Изображение логотипа"
+            className={styles["user"]}
+          />
+        ) : (
+          <img src={user.photoURL} alt="" className={styles["user"]} />
+        )}
+      </div>
+
       <div className={styles["menu_tab"]}>
         {showMenu ? (
           <IoClose onClick={closeMenu} size={50} />
@@ -63,13 +66,21 @@ const Header = () => {
             <NavLink to="/" className={styles["link"]} onClick={closeMenu}>
               <IoHomeOutline size={45} /> Home
             </NavLink>
-            <NavLink to="/category" className={styles["link"]} onClick={closeMenu}>
+            <NavLink
+              to="/category"
+              className={styles["link"]}
+              onClick={closeMenu}
+            >
               <PiCookingPotBold size={45} /> Category
             </NavLink>
             <NavLink to="/heart" className={styles["link"]} onClick={closeMenu}>
               <IoHeartOutline size={45} /> Heart
             </NavLink>
-            <NavLink to="/profile" className={styles["link"]} onClick={closeMenu}>
+            <NavLink
+              to="/profile"
+              className={styles["link"]}
+              onClick={closeMenu}
+            >
               <IoPersonCircleOutline size={45} /> Profile
             </NavLink>
           </div>

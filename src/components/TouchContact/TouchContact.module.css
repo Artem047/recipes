@@ -51,4 +51,11 @@
     .touch h1{
         font-size: 32px;
     }
+    .touch-form{
+        flex-direction: column;
+    }
+    .touch-form button{
+        width: 100%;
+        padding: 16px;
+    }
 }

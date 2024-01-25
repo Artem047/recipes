@@ -49,3 +49,19 @@ li{
 	align-items: center;
 	gap: 10px;
 }
+
+@media (max-width: 450px){
+	.product-info{
+		gap: 0px;
+		padding: 0px;
+	}
+}
+@media (max-width: 320px){
+	.product-info{
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
