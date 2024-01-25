@@ -1,6 +1,7 @@
 .food{
     display: flex;
     flex-wrap: wrap;
+	justify-content: center;
     gap: 30px;
     padding: 40px 0px;
     text-align: center;
@@ -55,3 +56,17 @@
 	align-items: center;
 	gap: 10px;
 }
+@media (max-width: 875px){
+	.product-card{
+		max-width: 250px;
+		height: 300px;
+	}
+	.product-info{
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+

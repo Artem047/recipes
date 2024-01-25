@@ -49,10 +49,22 @@ li{
 	align-items: center;
 	gap: 10px;
 }
-
+@media (max-width: 875px){
+	.product-card{
+		max-width: 300px;
+		height: 300px;
+	}
+	.product-info{
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
 @media (max-width: 450px){
 	.product-info{
-		gap: 0px;
+		gap: 20px;
 		padding: 0px;
 	}
 }

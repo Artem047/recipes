@@ -2,11 +2,9 @@ import { useState } from 'react';
 import styles from './PopularCard.module.css';
 import { useEffect } from 'react';
 import { API } from '../../utils/API';
-import { IoHeart } from "react-icons/io5";
 import { FaClock } from "react-icons/fa6";
 import { IoMdPricetag } from "react-icons/io";
-import { Link, useParams } from 'react-router-dom';
-import ButtonIcon from '../ButtonIcon/ButtonIcon';
+import { Link } from 'react-router-dom';
 
 
 const PopularCard = () => {

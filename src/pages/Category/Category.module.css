@@ -24,3 +24,21 @@
     background-color: var(--primary-hover-color);
     text-decoration: none;
 }
+.category-link img{
+    width: 35px;
+    height: 35px;
+}
+@media (max-width: 1075px){
+    .category{
+        padding: 70px 20px;
+    }
+}
+@media (max-width: 875px){
+    .category-product{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .category-link b{
+        font-size: 14px;
+    }
+}
