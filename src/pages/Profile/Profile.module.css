@@ -28,6 +28,7 @@
 	justify-content: center;
 	gap: 32px;
 	padding: 20px 0px;
+	width: 100%;
 }
 .profile-input{
 	display: flex;
@@ -61,6 +62,7 @@
 	justify-content: center;
 	gap: 32px;
 	padding: 20px 0px;
+	width: 100%;
 }
 .exit-btn{
 	display: flex;
