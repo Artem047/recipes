@@ -42,6 +42,7 @@
     font-size: 18px;
 }
 .category-card-ingredients{
+    max-width: 700px;
     list-style-type: disc;
     background-color: var(--white-color);
     padding: 24px;
@@ -70,4 +71,58 @@
 .category-card-instructions ol li{
     list-style: circle;
     padding: 5px 0px;
+}
+@media (max-width: 1075px){
+    .category-card{
+        padding: 20px;
+    }
+    .category-card-product{
+        gap: 20px;
+    }
+    .category-card-ingredients h2{
+        font-size: 30px;
+    }
+    .category-card-product li{
+        font-size: 16px;
+    }
+}
+@media (max-width: 875px){
+    .category-card-navigate{
+        padding: 100px 0px 50px;
+    }
+    .category-card-info-header h2{
+        font-size: 30px;
+    }
+    .category-card-product{
+        flex-direction: column;
+        align-items: center;
+    }
+    .category-card-ingredients{
+        width: 100%;
+    }
+    .category-card-time{
+        justify-content: center;
+    }
+    .category-card-info h2{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+@media (max-width: 450px){
+    .category-card-info-header{
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .category-card-time{
+        padding: 0px;
+    }
+    .category-card-time-list hr{
+        display: none;
+    }
+    .category-card-time-list{
+        gap: 10px;
+        flex-wrap: wrap;
+    }
 }
