@@ -12,7 +12,7 @@
 	align-items: center;
 	flex-direction: column;
 	max-width: 500px;
-	width: 100vw;
+	width: 100%;
 	gap: 10px;
 	padding: 50px;
 	border-radius: 10px;
@@ -90,4 +90,12 @@
 }
 .form input::placeholder{
 	color: var(--text-color);
+}
+@media (max-width: 450px){
+	.form{
+		padding: 20px;
+	}
+	.account{
+		flex-direction: column;
+	}
 }

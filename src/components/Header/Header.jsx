@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <div className={styles["navbar"]}>
       <div className={styles["header"]}>
-        <img src="/logo.svg" alt="Иконка сайта" className={styles["logo"]} />
+        <img src="/logo.svg" alt="Иконка сайта" />
         <p>
           Artem<b>Recipes</b>
         </p>
