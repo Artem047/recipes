@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { API } from "../../utils/API";
-import Loading from "../Loading";
+import Loading from "../Loading/Loading";
 
 const CategoryPage = () => {
   const [category, setCategory] = useState([]);
