@@ -79,3 +79,9 @@
 	cursor: pointer;
 	font-size: 18px;
 }
+
+@media (max-width: 875px){
+	.profile-navigate{
+		padding: 75px 20px;
+	}
+}

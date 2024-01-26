@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./CategoryCard.module.css";
 import { Link, useParams } from "react-router-dom";
 import { API } from "../../utils/API";
-import Loading from "../Loading";
+import Loading from "../Loading/Loading";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoHeart, IoShareSocial } from "react-icons/io5";
 import ButtonIcon from "../ButtonIcon/ButtonIcon";

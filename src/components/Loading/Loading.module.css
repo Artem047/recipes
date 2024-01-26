@@ -1,0 +1,12 @@
+.load{
+    font-size: 60px;
+    text-align: center;
+    padding: 25% 0px;
+}
+@media(max-width: 450px){
+    .load{
+        font-size: 40px;
+        padding: 50% 0px;
+    }
+    
+}

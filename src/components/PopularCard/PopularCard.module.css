@@ -50,9 +50,12 @@ li{
 	gap: 10px;
 }
 @media (max-width: 875px){
+	.product-list{
+		gap: 10px;
+	}
 	.product-card{
 		max-width: 300px;
-		height: 300px;
+		height: 320px;
 	}
 	.product-info{
 		padding: 0;
