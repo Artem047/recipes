@@ -52,16 +52,10 @@
 	filter: brightness(80%);
 	border-radius: 20px 20px 0px 0px;
 }
-<<<<<<< HEAD
-@media(max-width: 875px){
-	.page-link{
-		padding: 150px 20px 20px;
-=======
 
 @media (max-width: 875px){
 	.page-link{
 		padding: 100px 20px 0px;
->>>>>>> refs/remotes/origin/main
 	}
 	.category-card{
 		max-width: 300px;
