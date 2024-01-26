@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 .loading{
     /* display: flex;
     justify-content: center;
     padding: 30% 0px; */
     font-size: 50px;
+=======
+.load{
+    font-size: 60px;
+    text-align: center;
+    padding: 25% 0px;
+}
+@media(max-width: 450px){
+    .load{
+        font-size: 40px;
+        padding: 50% 0px;
+    }
+    
+>>>>>>> refs/remotes/origin/main
 }

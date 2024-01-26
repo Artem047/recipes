@@ -7,6 +7,7 @@
 }
 .heart-list{
     display: flex; 
+	justify-content: center;
     flex-wrap: wrap;
 	gap: 20px;
 }
@@ -50,7 +51,7 @@
 .favorite-info{
 	padding: 0px 20px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	gap: 10px;
 }
@@ -65,4 +66,31 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
+}
+
+
+@media (max-width: 1075px){
+    .heart{
+        padding: 0px 20px;
+    }
+}
+@media (max-width: 875px){
+	.heart{
+		padding: 75px 20px;
+	}
+	.heart-card{
+		max-width: 300px;
+		height: 300px;
+	}
+	.favorite-info{
+		padding: 0px;
+	}
+	.favorite-info-price{
+		padding: 0px;
+	}
+}
+@media (max-width: 450px){
+	.heart h1{
+		font-size: 50px;
+	}
 }
