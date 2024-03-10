@@ -4,13 +4,14 @@ import { Link, useParams } from "react-router-dom";
 import { API } from "../../utils/API";
 import Loading from "../Loading/Loading";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { IoHeart, IoShareSocial } from "react-icons/io5";
+import { IoHeart, IoShareSocial, IoHeartOutline } from "react-icons/io5";
 import ButtonIcon from "../ButtonIcon/ButtonIcon";
 
 const CategoryCard = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [favorites, setFavorites] = useState(false);
 
   const fetchRecipeDetails = async (recipeId) => {
     const data = await fetch(
@@ -35,11 +36,14 @@ const CategoryCard = () => {
     if (!favoritesArray.find((fav) => fav.id === recipe.id)) {
       const updatedFavorites = [...favoritesArray, { ...recipe }];
       localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      setFavorites(true);
+      alert('Товар добавлен в избранное')
     }
   };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href);
+    alert('Ссылка скопирована')
   };
 
   return isLoading ? (
@@ -57,7 +61,11 @@ const CategoryCard = () => {
             <h2>{recipe.title}</h2>
             <div className={styles["category-card-info-header-social"]}>
               <ButtonIcon click={handleToHeart}>
-                <IoHeart size={30} color="red" />
+                {favorites ? (
+                  <IoHeart size={30} color="red" />
+                ) : (
+                  <IoHeartOutline size={30} color="red" />
+                )}
               </ButtonIcon>
               <ButtonIcon click={handleCopy}>
                 <IoShareSocial size={30} color="#1cb96d" />
